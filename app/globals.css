@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-space-mono: 'Space Mono', monospace;
+  --accent-red: #F70000;
+  --bg-primary: #0A0A0A;
+  --surface: #111111;
+  --card: #1A1A1A;
+  --border: #2A2A2A;
+  --text: #E6E6E5;
+  --muted: #A7A7A7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide native scrollbar completely — Diet Coke scrollbar takes over */
+  html, body {
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;   /* IE / Edge */
+  }
+  ::-webkit-scrollbar {
+    display: none;               /* Chrome / Safari / Opera */
+  }
+
+  body {
+    @apply bg-dark-primary text-text-light font-inter;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  a, button {
+    @apply transition-colors duration-300;
+    cursor: none;
+  }
+
+  * {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-16 text-text-light;
+  }
+
+  .section-title::before {
+    content: '';
+    @apply block w-20 h-1 bg-gradient-to-r from-accent-pink to-accent-pink-light rounded mb-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-accent-pink text-white hover:shadow-lg hover:shadow-accent-pink/30 hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-accent-pink text-text-primary hover:bg-accent-pink/10 hover:-translate-y-1;
+  }
+
+  .glass {
+    @apply bg-white/3 backdrop-blur-sm border border-white/8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-pink to-accent-pink-light bg-clip-text text-transparent;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    @apply rounded-lg p-6 transition-all duration-300 hover:border-accent-pink;
+  }
+
+  /* Custom Cursor */
+  .cursor-outer {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+  }
+
+  .cursor-inner {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease;
+  }
+
+  .cursor-outer.hovered {
+    width: 64px;
+    height: 64px;
+    border-color: #F70000;
+    background: rgba(247, 0, 0, 0.08);
+  }
+
+  .cursor-inner.hovered {
+    width: 8px;
+    height: 8px;
+    background: #F70000;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: #F70000;
+  color: #fff;
+}
+
+/* Marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 60s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
