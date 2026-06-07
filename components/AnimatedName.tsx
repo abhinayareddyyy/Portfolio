@@ -22,7 +22,6 @@ function AnimatedLetter({
   isHovered: boolean;
   mouseX: number;
   mouseY: number;
-  containerRef: React.RefObject<HTMLSpanElement | null>;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const x = useMotionValue(0);
@@ -140,7 +139,6 @@ export default function AnimatedName() {
           isHovered={isHovered}
           mouseX={mouse.x}
           mouseY={mouse.y}
-          containerRef={containerRef}
         />
       ))}
     </motion.span>

@@ -20,7 +20,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
         });
 
         function raf(time: number) {
-          lenis.raf(time);
+          if (lenis) lenis.raf(time);
           requestAnimationFrame(raf);
         }
         requestAnimationFrame(raf);

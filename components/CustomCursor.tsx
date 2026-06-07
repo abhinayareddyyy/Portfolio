@@ -8,7 +8,7 @@ export default function CustomCursor() {
   const [hovered, setHovered] = useState(false);
   const pos = useRef({ x: -100, y: -100 });
   const outerPos = useRef({ x: -100, y: -100 });
-  const rafId = useRef<number>();
+  const rafId = useRef<number>(undefined);
 
   useEffect(() => {
     const move = (e: MouseEvent) => {

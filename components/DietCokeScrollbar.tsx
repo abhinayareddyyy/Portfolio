@@ -8,7 +8,7 @@ export default function DietCokeScrollbar() {
   const isDragging = useRef(false);
   const dragStartY = useRef(0);
   const dragStartScroll = useRef(0);
-  const rafId = useRef<number>();
+  const rafId = useRef<number>(undefined);
 
   // Smooth animated values
   const currentY = useRef(0);
