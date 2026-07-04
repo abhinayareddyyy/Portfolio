@@ -22,8 +22,8 @@ const TYPE_CONFIG: Record<string, { icon: typeof GraduationCap; color: string; b
 
 export default function Education() {
   return (
-    <section id="education" className="py-16 bg-[#111111] relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-10 bg-[#111111] relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
         {/* background glow */}
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -38,11 +38,11 @@ export default function Education() {
           </motion.h2>
 
           {/* Card list with connecting line */}
-          <div className="relative">
+          <div className="relative max-w-[1600px] mx-auto">
             {/* Vertical timeline line */}
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#F70000] via-[#2A2A2A] to-transparent" />
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {portfolioData.education.map((edu, index) => {
                 const cfg = TYPE_CONFIG[edu.type] ?? TYPE_CONFIG.School;
                 const Icon = cfg.icon;
@@ -68,7 +68,7 @@ export default function Education() {
 
                     {/* Card */}
                     <motion.div
-                      className="group bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 hover:border-[#F70000]/50 hover:shadow-lg hover:shadow-[#F70000]/8 transition-all duration-300 relative overflow-hidden"
+                      className="group bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 lg:p-7 hover:border-[#F70000]/50 hover:shadow-lg hover:shadow-[#F70000]/8 transition-all duration-300 relative overflow-hidden w-full"
                       whileHover={{ x: 4 }}
                     >
                       {/* Animated left accent */}
@@ -86,10 +86,10 @@ export default function Education() {
                           </div>
 
                           <div>
-                            <h3 className="text-xl font-bold text-[#E6E6E5] leading-tight">
+                            <h3 className="text-2xl font-bold text-[#E6E6E5] leading-tight">
                               {edu.institution}
                             </h3>
-                            <p className="text-[#A7A7A7] text-sm mt-0.5">{edu.degree}</p>
+                            <p className="text-[#A7A7A7] text-base mt-0.5">{edu.degree}</p>
                           </div>
                         </div>
 

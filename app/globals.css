@@ -52,12 +52,12 @@
 
 @layer components {
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-8 text-text-light;
+    @apply text-5xl md:text-6xl xl:text-7xl font-bold mb-8 text-text-light;
   }
 
   .section-title::before {
     content: '';
-    @apply block w-20 h-1 bg-gradient-to-r from-accent-pink to-accent-pink-light rounded mb-6;
+    @apply block w-24 h-1 bg-gradient-to-r from-accent-pink to-accent-pink-light rounded mb-4;
   }
 
   .btn {
@@ -83,7 +83,7 @@
   .card {
     background: var(--card);
     border: 1px solid var(--border);
-    @apply rounded-lg p-6 transition-all duration-300 hover:border-accent-pink;
+    @apply rounded-lg p-7 transition-all duration-300 hover:border-accent-pink;
   }
 
   /* Custom Cursor */

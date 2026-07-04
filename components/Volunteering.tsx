@@ -24,8 +24,8 @@ const ICONS = [Cpu, FlaskConical, Mic2, Heart, Star];
 
 export default function Volunteering() {
   return (
-    <section id="volunteering" className="py-16 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="volunteering" className="py-10 relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
         <motion.div
@@ -34,12 +34,12 @@ export default function Volunteering() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
         >
-          <motion.h2 variants={itemVariants} className="section-title">
+          <motion.h2 variants={itemVariants} className="section-title text-center">
             Participations & Volunteering
           </motion.h2>
 
           <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 xl:gap-5 relative z-10 max-w-[1600px] mx-auto justify-items-center items-stretch"
             variants={containerVariants}
           >
             {portfolioData.volunteering.map((item, index) => {
@@ -50,7 +50,7 @@ export default function Volunteering() {
                 <motion.div
                   key={item.id}
                   variants={itemVariants}
-                  className="group bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 hover:border-[#F70000]/50 hover:shadow-lg hover:shadow-[#F70000]/8 transition-all duration-300 relative overflow-hidden"
+                  className="group bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 hover:border-[#F70000]/50 hover:shadow-lg hover:shadow-[#F70000]/8 transition-all duration-300 relative overflow-hidden w-full max-w-[320px] h-full"
                   whileHover={{ y: -4 }}
                 >
                   {/* Top accent */}
@@ -60,9 +60,9 @@ export default function Volunteering() {
                   />
 
                   {/* Header row */}
-                  <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-start justify-center gap-3 mb-4">
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      className="w-11 h-11 rounded-xl flex items-center justify-center"
                       style={{ background: `${style.color}18` }}
                     >
                       <Icon size={18} style={{ color: style.color }} />
@@ -82,12 +82,12 @@ export default function Volunteering() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-[#E6E6E5] mb-2 leading-snug">
+                  <h3 className="text-2xl font-bold text-[#E6E6E5] mb-3 leading-snug text-center">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#A7A7A7] text-sm leading-relaxed">
+                  <p className="text-[#A7A7A7] text-base leading-relaxed text-center">
                     {item.description}
                   </p>
                 </motion.div>

@@ -60,10 +60,10 @@ export const portfolioData = {
   ],
 
   skills: {
-    web: ['HTML', 'CSS', 'JavaScript'],
+    web: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
     programming: ['Java', 'C', 'MySQL'],
-    concepts: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming'],
-    tools: ['Git', 'GitHub', 'VS Code', 'Canva'],
+    concepts: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
+    tools: ['Git', 'GitHub', 'VS Code', 'Canva', 'Figma'],
   },
 
   projects: [

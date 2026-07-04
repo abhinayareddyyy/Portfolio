@@ -70,8 +70,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-dark-secondary relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-10 bg-dark-secondary relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
         {/* Background elements */}
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -84,14 +84,14 @@ export default function Contact() {
         >
           <motion.div className="text-center mb-8" variants={itemVariants}>
             <h2 className="section-title">{portfolioData.contact.title}</h2>
-            <p className="text-lg text-text-light/80">
+            <p className="text-xl text-text-light/80 max-w-3xl mx-auto">
               {portfolioData.contact.description}
             </p>
           </motion.div>
 
           {/* Contact Links */}
           <motion.div
-            className="grid md:grid-cols-3 gap-4 mb-8"
+            className="grid md:grid-cols-3 gap-4 xl:gap-5 mb-8 max-w-[1600px] mx-auto items-stretch"
             variants={containerVariants}
           >
             {portfolioData.contact.links.map((link) => (
@@ -118,7 +118,7 @@ export default function Contact() {
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="card space-y-4 max-w-2xl mx-auto"
+            className="card space-y-4 lg:space-y-5 max-w-3xl mx-auto w-full"
             variants={itemVariants}
           >
             <div className="grid md:grid-cols-2 gap-4">
@@ -128,7 +128,7 @@ export default function Contact() {
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                 required
-                className="w-full px-4 py-3 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors"
+                className="w-full px-4 py-4 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors"
               />
               <input
                 type="email"
@@ -136,7 +136,7 @@ export default function Contact() {
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                 required
-                className="w-full px-4 py-3 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors"
+                className="w-full px-4 py-4 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function Contact() {
               value={formState.message}
               onChange={(e) => setFormState({ ...formState, message: e.target.value })}
               required
-              className="w-full px-4 py-3 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors resize-none"
+              className="w-full px-4 py-4 bg-dark-primary border border-white/10 rounded-lg text-text-light placeholder-text-muted focus:outline-none focus:border-accent-pink transition-colors resize-none"
             />
 
             <button

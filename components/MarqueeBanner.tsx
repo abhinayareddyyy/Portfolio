@@ -7,7 +7,7 @@ const REPEATED = TEXT + TEXT;
 
 export default function MarqueeBanner() {
   return (
-    <div className="w-full overflow-hidden border-y border-[#2A2A2A] bg-[#111111] py-4 relative z-10 select-none">
+    <div className="w-full overflow-hidden border-y border-[#2A2A2A] bg-[#111111] py-4 mt-[30px] relative z-10 select-none">
       {/* Row 1 – left to right */}
       <div className="relative flex overflow-hidden">
         <div className="marquee-track whitespace-nowrap">

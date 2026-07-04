@@ -22,8 +22,8 @@ export default function Achievements() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="achievements" className="py-16 bg-[#111111] relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="achievements" className="py-10 bg-[#111111] relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
         <motion.div
@@ -37,7 +37,7 @@ export default function Achievements() {
           </motion.h2>
 
           <motion.div
-            className="grid md:grid-cols-2 gap-6 relative z-10"
+            className="grid md:grid-cols-2 gap-4 xl:gap-5 relative z-10 max-w-[1600px] mx-auto items-stretch"
             variants={containerVariants}
           >
             {portfolioData.achievements.map((achievement, idx) => {
@@ -46,7 +46,7 @@ export default function Achievements() {
                 <motion.div
                   key={achievement.id}
                   variants={itemVariants}
-                  className="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 transition-all duration-300 hover:border-[#F70000]/60 hover:shadow-xl hover:shadow-[#F70000]/10 overflow-hidden"
+                  className="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 lg:p-7 transition-all duration-300 hover:border-[#F70000]/60 hover:shadow-xl hover:shadow-[#F70000]/10 overflow-hidden w-full h-full"
                   whileHover={{ y: -5 }}
                 >
                   {/* Left accent bar */}
@@ -68,7 +68,7 @@ export default function Achievements() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-[#E6E6E5] mb-2">
+                  <h3 className="text-3xl md:text-4xl font-bold text-[#E6E6E5] mb-2">
                     {achievement.title}
                   </h3>
                   <p className="text-[#F70000] text-sm font-semibold mb-1">
@@ -77,7 +77,7 @@ export default function Achievements() {
                   <p className="text-[#7D7C7C] text-xs font-mono mb-3">
                     {achievement.date}
                   </p>
-                  <p className="text-[#A7A7A7] text-sm leading-relaxed">
+                  <p className="text-[#A7A7A7] text-base leading-relaxed">
                     {achievement.description}
                   </p>
 

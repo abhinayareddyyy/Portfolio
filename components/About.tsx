@@ -18,12 +18,12 @@ export default function About() {
   const paragraphs = portfolioData.about.story.split('\n\n');
 
   return (
-    <section id="about" className="py-16 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-10 relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
         <motion.div
-          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10"
+          className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 xl:gap-10 items-center relative z-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -31,31 +31,31 @@ export default function About() {
         >
           {/* ── LEFT: Profile Image ── */}
           <motion.div variants={itemVariants} className="flex items-center justify-center">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#F70000]/10 rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#F70000] via-[#FF3333]/60 to-[#F70000]/20 shadow-2xl shadow-[#F70000]/20" style={{ maxWidth: '32rem' }}>
-                <div className="rounded-2xl overflow-hidden bg-[#1A1A1A]">
-                  <Image
-                    src="/images/about page.png"
-                    alt="Abhinaya Reddy"
-                    width={560}
-                    height={700}
-                    className="w-full h-auto object-contain block"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </motion.div>
+  <div className="relative w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] mx-auto">
+    <div className="absolute -inset-4 bg-[#F70000]/10 rounded-[2rem] blur-2xl" />
+    <div className="relative rounded-[2rem] p-[2px] bg-gradient-to-br from-[#F70000] via-[#FF3333]/60 to-[#F70000]/20 shadow-2xl shadow-[#F70000]/20 w-full">
+      <div className="rounded-2xl overflow-hidden bg-[#1A1A1A]">
+        <Image
+          src="/images/about page.png"
+          alt="Abhinaya Reddy"
+          width={800}
+          height={1000}
+          className="w-full h-auto object-contain block"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
 
           {/* ── RIGHT: Text Content ── */}
-          <motion.div variants={itemVariants} className="space-y-4">
+          <motion.div variants={itemVariants} className="space-y-4 xl:space-y-5 max-w-3xl text-left">
             {/* Label + heading */}
             <div>
-              <p className="text-[#F70000] text-sm font-semibold tracking-widest uppercase mb-3">
+              <p className="text-[#F70000] text-sm md:text-base font-semibold tracking-[0.28em] uppercase mb-4">
                 About Me
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#E6E6E5] leading-tight">
+              <h2 className="text-5xl md:text-6xl xl:text-7xl font-bold text-[#E6E6E5] leading-[0.95]">
                 Developer{' '}
                 <span className="text-[#F70000]">•</span>{' '}
                 Designer{' '}
@@ -66,13 +66,13 @@ export default function About() {
 
             {/* Story paragraphs */}
             {paragraphs.map((para, i) => (
-              <p key={i} className="text-base text-[#A7A7A7] leading-relaxed">
+              <p key={i} className="text-lg xl:text-xl text-[#A7A7A7] leading-relaxed">
                 {para}
               </p>
             ))}
 
             {/* Closing with highlighted words */}
-            <p className="text-base text-[#E6E6E5]/80 leading-relaxed">
+            <p className="text-lg xl:text-xl text-[#E6E6E5]/80 leading-relaxed">
               Currently, I&#39;m focused on{' '}
               <span className="text-[#F70000] font-semibold">web development</span>,{' '}
               <span className="text-[#F70000] font-semibold">software engineering</span>,

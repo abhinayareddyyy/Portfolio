@@ -11,12 +11,15 @@ const DEVICON: Record<string, string> = {
   JavaScript: 'devicon-javascript-plain colored',
   React: 'devicon-react-plain colored',
   Java: 'devicon-java-plain colored',
+  Python: 'devicon-python-plain colored',
   C: 'devicon-c-plain colored',
   MySQL: 'devicon-mysql-plain colored',
   Git: 'devicon-git-plain colored',
   GitHub: 'devicon-github-plain',
   'VS Code': 'devicon-vscode-plain colored',
   Canva: 'devicon-canva-plain colored',
+  Figma: 'devicon-figma-plain colored',
+  'MERN Stack': 'devicon-mongodb-plain colored',
 };
 
 /* ─── Category definitions ─── */
@@ -24,22 +27,22 @@ const TABS = [
   {
     id: 'frontend',
     label: 'Frontend',
-    skills: ['HTML', 'CSS', 'JavaScript'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
   },
   {
     id: 'programming',
     label: 'Programming',
-    skills: ['C', 'Java', 'MySQL'],
+    skills: ['C', 'Java', 'Python', 'MySQL'],
   },
   {
     id: 'concepts',
     label: 'Core Concepts',
-    skills: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming'],
+    skills: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
   },
   {
     id: 'tools',
     label: 'Tools',
-    skills: ['Git', 'GitHub', 'VS Code', 'Canva'],
+    skills: ['Git', 'GitHub', 'VS Code', 'Canva', 'Figma'],
   },
   {
     id: 'soft',
@@ -65,21 +68,21 @@ function SkillCard({ name }: { name: string }) {
   const iconClass = DEVICON[name];
   return (
     <motion.div
-      className="group bg-[#141414] border border-[#2A2A2A] rounded-2xl p-5 flex flex-col items-center justify-center gap-3 aspect-square
+      className="group bg-[#141414] border border-[#2A2A2A] rounded-2xl p-6 flex flex-col items-center justify-center gap-4 aspect-square w-full max-w-[180px]
                  hover:border-[#F70000]/60 hover:bg-[#1c1c1c] transition-all duration-300 cursor-default"
       whileHover={{ y: -5, boxShadow: '0 12px 40px rgba(247,0,0,0.15)' }}
       layout
     >
-      <div className="w-14 h-14 flex items-center justify-center">
+      <div className="w-16 h-16 flex items-center justify-center">
         {iconClass ? (
           <i className={`${iconClass} text-5xl leading-none`} />
         ) : (
-          <div className="w-12 h-12 rounded-xl bg-[#F70000]/12 border border-[#F70000]/20 flex items-center justify-center">
+          <div className="w-14 h-14 rounded-xl bg-[#F70000]/12 border border-[#F70000]/20 flex items-center justify-center">
             <LetterBadge name={name} />
           </div>
         )}
       </div>
-      <span className="text-[#E6E6E5] text-xs font-medium text-center leading-tight group-hover:text-white transition-colors">
+      <span className="text-[#E6E6E5] text-sm font-medium text-center leading-tight group-hover:text-white transition-colors">
         {name}
       </span>
     </motion.div>
@@ -90,15 +93,15 @@ function SkillCard({ name }: { name: string }) {
 function MarqueeRow({ skills, reverse = false, speed = 65 }: { skills: string[]; reverse?: boolean; speed?: number }) {
   const repeated = [...skills, ...skills, ...skills, ...skills];
   return (
-    <div className="overflow-hidden py-1.5">
+    <div className="overflow-hidden py-2">
       <div
-        className="flex gap-3 w-max"
+        className="flex gap-4 w-max"
         style={{ animation: `${reverse ? 'marquee-reverse' : 'marquee'} ${speed}s linear infinite` }}
       >
         {repeated.map((s, i) => (
           <span
             key={i}
-            className="px-4 py-2 rounded-full border border-[#2A2A2A] bg-[#0A0A0A] text-[#A7A7A7] text-sm font-medium whitespace-nowrap hover:border-[#F70000] hover:text-[#F70000] transition-colors duration-300"
+            className="px-5 py-2.5 rounded-full border border-[#2A2A2A] bg-[#0A0A0A] text-[#A7A7A7] text-base font-medium whitespace-nowrap hover:border-[#F70000] hover:text-[#F70000] transition-colors duration-300"
           >
             {s}
           </span>
@@ -121,8 +124,8 @@ export default function Skills() {
   const active = TABS.find((t) => t.id === activeTab)!;
 
   return (
-    <section id="skills" className="py-16 bg-[#0A0A0A] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-10 bg-[#0A0A0A] relative overflow-hidden">
+      <div className="w-full px-5 sm:px-8 md:px-10 lg:px-[66px]">
 
         {/* Heading */}
         <motion.div
@@ -130,17 +133,17 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-8 text-center"
         >
           <h2 className="section-title">Skills & Expertise</h2>
-          <p className="text-[#A7A7A7] max-w-xl">
+          <p className="text-[#A7A7A7] text-lg max-w-2xl mx-auto">
             Technologies, concepts and tools I actively work with.
           </p>
         </motion.div>
 
         {/* Tab bar */}
         <motion.div
-          className="flex flex-wrap gap-2 mb-8"
+          className="flex flex-wrap gap-3 mb-7 justify-center"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -150,7 +153,7 @@ export default function Skills() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-[#F70000] text-white shadow-lg shadow-[#F70000]/30 scale-105'
                   : 'bg-transparent border border-[#2A2A2A] text-[#A7A7A7] hover:border-[#F70000]/50 hover:text-[#E6E6E5]'
@@ -165,7 +168,11 @@ export default function Skills() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 mb-12"
+            className={`grid gap-5 mb-10 mx-auto justify-items-center items-stretch ${
+              activeTab === 'soft'
+                ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 max-w-[1100px]'
+                : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 max-w-[1320px]'
+            }`}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -181,8 +188,8 @@ export default function Skills() {
       </div>
 
       {/* Marquee full-bleed */}
-      <div className="border-t border-[#2A2A2A] pt-8 space-y-3">
-        <p className="text-center text-[#7D7C7C] text-xs tracking-widest uppercase font-semibold mb-6">
+      <div className="border-t border-[#2A2A2A] pt-7 space-y-3">
+        <p className="text-center text-[#7D7C7C] text-sm tracking-widest uppercase font-semibold mb-6">
           All Skills
         </p>
         <MarqueeRow skills={ALL_SKILLS} reverse={false} speed={70} />

@@ -23,7 +23,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#111111] border-t border-[#2A2A2A] py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-8 md:px-10 lg:px-[66px]">
         <div className="flex justify-between items-center">
           <p className="text-[#A7A7A7] text-sm">
             © {currentYear} Abhinaya Reddy. All rights reserved.
