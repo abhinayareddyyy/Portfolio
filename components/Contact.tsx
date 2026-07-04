@@ -1,9 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '@/lib/data';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, CheckCircle, AlertCircle } from 'lucide-react';
+
+// Google Forms configuration
+const GOOGLE_FORM_ACTION =
+  'https://docs.google.com/forms/d/e/1FAIpQLSf1jB6mzXUEmGv7EFjs_ygD9soIA3RUx-9bGdnrYF52eK510Q/formResponse';
+const ENTRY_NAME    = 'entry.283007280';
+const ENTRY_EMAIL   = 'entry.1185754734';
+const ENTRY_MESSAGE = 'entry.1067915766';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,17 +34,33 @@ const itemVariants = {
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    
-    setFormState({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    alert('Message sent successfully!');
+    try {
+      const body = new FormData();
+      body.append(ENTRY_NAME,    formState.name);
+      body.append(ENTRY_EMAIL,   formState.email);
+      body.append(ENTRY_MESSAGE, formState.message);
+
+      // Google Forms requires no-cors mode; we treat any network response as success
+      await fetch(GOOGLE_FORM_ACTION, {
+        method: 'POST',
+        mode: 'no-cors',
+        body,
+      });
+
+      setSubmitStatus('success');
+      setFormState({ name: '', email: '', message: '' });
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const iconMap = {
@@ -129,10 +152,41 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full btn btn-primary disabled:opacity-50"
+              className="w-full btn btn-primary disabled:opacity-50 flex items-center justify-center gap-2"
             >
+              {isSubmitting && (
+                <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+
+            <AnimatePresence>
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  className="flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 text-sm"
+                >
+                  <CheckCircle size={16} />
+                  <span>Message sent! I&apos;ll get back to you soon</span>
+                </motion.div>
+              )}
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  className="flex items-center gap-2 px-4 py-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm"
+                >
+                  <AlertCircle size={16} />
+                  <span>Something went wrong. Please try again or email directly</span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.form>
         </motion.div>
       </div>

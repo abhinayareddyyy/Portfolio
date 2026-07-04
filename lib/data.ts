@@ -18,7 +18,7 @@ export const portfolioData = {
 
   about: {
     intro: '',
-    story: "I enjoy turning ideas into impactful products, from responsive web applications to user-centric interfaces. Through hackathons and independent projects, I've explored solutions across healthcare, productivity, and front-end engineering.\n\nBeyond code, I'm actively involved in leadership and community-building. As a member of NEN, panel discussion moderator, anchor, public speaker, and social media marketer, I've had the opportunity to engage with diverse audiences, foster meaningful conversations, and bridge the gap between technology and people.",
+    story: "I enjoy turning ideas into impactful products, from responsive web applications to user-centric interfaces. Through hackathons and independent projects, I've explored solutions across healthcare, productivity, and front-end engineering.\n\nBeyond code, I'm actively involved in leadership and community-building. As a member of NEN, panel discussion moderator, anchor, public speaker, and social media manager, I've had the opportunity to engage with diverse audiences, foster meaningful conversations, and bridge the gap between technology and people.",
     closing: "Currently, I'm focused on web development, exploring AI, and building projects that challenge me to grow as both an engineer and a creator.",
     stats: [
       { value: '5+', label: 'Projects Built' },
@@ -117,7 +117,7 @@ export const portfolioData = {
   experience: [
     {
       id: 1,
-      company: 'Social Media Marketer – Communitie Hyderabad',
+      company: 'Social Media Manager – Communitie Hyderabad',
       role: '@communitie.racing',
       date: 'Feb 2026 – Present',
       type: 'Remote',
