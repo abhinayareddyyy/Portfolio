@@ -22,7 +22,7 @@ const TYPE_CONFIG: Record<string, { icon: typeof GraduationCap; color: string; b
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-[#111111] relative overflow-hidden">
+    <section id="education" className="py-16 bg-[#111111] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* background glow */}
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
@@ -42,7 +42,7 @@ export default function Education() {
             {/* Vertical timeline line */}
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#F70000] via-[#2A2A2A] to-transparent" />
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {portfolioData.education.map((edu, index) => {
                 const cfg = TYPE_CONFIG[edu.type] ?? TYPE_CONFIG.School;
                 const Icon = cfg.icon;

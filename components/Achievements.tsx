@@ -22,7 +22,7 @@ export default function Achievements() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="achievements" className="py-24 bg-[#111111] relative overflow-hidden">
+    <section id="achievements" className="py-16 bg-[#111111] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -37,7 +37,7 @@ export default function Achievements() {
           </motion.h2>
 
           <motion.div
-            className="grid md:grid-cols-2 gap-8 relative z-10"
+            className="grid md:grid-cols-2 gap-6 relative z-10"
             variants={containerVariants}
           >
             {portfolioData.achievements.map((achievement, idx) => {
@@ -46,7 +46,7 @@ export default function Achievements() {
                 <motion.div
                   key={achievement.id}
                   variants={itemVariants}
-                  className="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-8 transition-all duration-300 hover:border-[#F70000]/60 hover:shadow-xl hover:shadow-[#F70000]/10 overflow-hidden"
+                  className="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 transition-all duration-300 hover:border-[#F70000]/60 hover:shadow-xl hover:shadow-[#F70000]/10 overflow-hidden"
                   whileHover={{ y: -5 }}
                 >
                   {/* Left accent bar */}
@@ -63,7 +63,7 @@ export default function Achievements() {
                   )}
 
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#F70000]/12 border border-[#F70000]/20 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#F70000]/12 border border-[#F70000]/20 flex items-center justify-center mb-4">
                     <Icon size={22} className="text-[#F70000]" />
                   </div>
 
@@ -74,7 +74,7 @@ export default function Achievements() {
                   <p className="text-[#F70000] text-sm font-semibold mb-1">
                     {achievement.issuer}
                   </p>
-                  <p className="text-[#7D7C7C] text-xs font-mono mb-4">
+                  <p className="text-[#7D7C7C] text-xs font-mono mb-3">
                     {achievement.date}
                   </p>
                   <p className="text-[#A7A7A7] text-sm leading-relaxed">

@@ -24,7 +24,7 @@ const ICONS = [Cpu, FlaskConical, Mic2, Heart, Star];
 
 export default function Volunteering() {
   return (
-    <section id="volunteering" className="py-24 relative overflow-hidden">
+    <section id="volunteering" className="py-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -39,7 +39,7 @@ export default function Volunteering() {
           </motion.h2>
 
           <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10"
             variants={containerVariants}
           >
             {portfolioData.volunteering.map((item, index) => {
@@ -60,7 +60,7 @@ export default function Volunteering() {
                   />
 
                   {/* Header row */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-3">
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center"
                       style={{ background: `${style.color}18` }}

@@ -70,7 +70,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-secondary relative overflow-hidden">
+    <section id="contact" className="py-16 bg-dark-secondary relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Background elements */}
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl pointer-events-none" />
@@ -82,7 +82,7 @@ export default function Contact() {
           viewport={{ once: true, margin: '-100px' }}
           className="relative z-10"
         >
-          <motion.div className="text-center mb-12" variants={itemVariants}>
+          <motion.div className="text-center mb-8" variants={itemVariants}>
             <h2 className="section-title">{portfolioData.contact.title}</h2>
             <p className="text-lg text-text-light/80">
               {portfolioData.contact.description}
@@ -91,7 +91,7 @@ export default function Contact() {
 
           {/* Contact Links */}
           <motion.div
-            className="grid md:grid-cols-3 gap-6 mb-12"
+            className="grid md:grid-cols-3 gap-4 mb-8"
             variants={containerVariants}
           >
             {portfolioData.contact.links.map((link) => (
@@ -118,7 +118,7 @@ export default function Contact() {
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="card space-y-6 max-w-2xl mx-auto"
+            className="card space-y-4 max-w-2xl mx-auto"
             variants={itemVariants}
           >
             <div className="grid md:grid-cols-2 gap-4">

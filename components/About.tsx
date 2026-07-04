@@ -18,12 +18,12 @@ export default function About() {
   const paragraphs = portfolioData.about.story.split('\n\n');
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
         <motion.div
-          className="grid md:grid-cols-2 gap-16 items-center relative z-10"
+          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -33,13 +33,13 @@ export default function About() {
           <motion.div variants={itemVariants} className="flex items-center justify-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-[#F70000]/10 rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#F70000] via-[#FF3333]/60 to-[#F70000]/20 shadow-2xl shadow-[#F70000]/20" style={{ maxWidth: '26.76rem' }}>
+              <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#F70000] via-[#FF3333]/60 to-[#F70000]/20 shadow-2xl shadow-[#F70000]/20" style={{ maxWidth: '32rem' }}>
                 <div className="rounded-2xl overflow-hidden bg-[#1A1A1A]">
                   <Image
                     src="/images/about page.png"
                     alt="Abhinaya Reddy"
-                    width={480}
-                    height={600}
+                    width={560}
+                    height={700}
                     className="w-full h-auto object-contain block"
                     priority
                   />
@@ -49,7 +49,7 @@ export default function About() {
           </motion.div>
 
           {/* ── RIGHT: Text Content ── */}
-          <motion.div variants={itemVariants} className="space-y-5">
+          <motion.div variants={itemVariants} className="space-y-4">
             {/* Label + heading */}
             <div>
               <p className="text-[#F70000] text-sm font-semibold tracking-widest uppercase mb-3">

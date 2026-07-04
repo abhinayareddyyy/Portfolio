@@ -24,7 +24,7 @@ const itemVariants = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -38,14 +38,14 @@ export default function Projects() {
             Projects
           </motion.h2>
 
-          <div className="space-y-20 relative z-10">
+          <div className="space-y-12 relative z-10">
             {portfolioData.projects.map((project, index) => {
               const isLeft = index % 2 === 0;
               return (
                 <motion.div
                   key={project.id}
                   variants={itemVariants}
-                  className={`group flex flex-col ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 items-center`}
+                  className={`group flex flex-col ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
                   whileHover={{ scale: 1.005 }}
                 >
                   {/* Image side */}
@@ -75,7 +75,7 @@ export default function Projects() {
                   </div>
 
                   {/* Content side */}
-                  <div className="w-full md:w-1/2 space-y-4">
+                  <div className="w-full md:w-1/2 space-y-3">
                     {/* Index */}
                     <span className="text-[#F70000] font-mono text-sm font-bold tracking-widest">
                       {String(index + 1).padStart(2, '0')}

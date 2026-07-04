@@ -27,10 +27,10 @@ export default function Hero({ introComplete = false }: HeroProps) {
       <div className="absolute top-20 right-10 w-96 h-96 bg-[#F70000]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-20 w-96 h-96 bg-[#F70000]/3 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
 
         {/* ── Left: Text content ── */}
-        <div className="space-y-6">
+        <div className="space-y-4">
 
           {/* "Hi, I'm" — fades in after intro */}
           <div>
@@ -74,7 +74,7 @@ export default function Hero({ introComplete = false }: HeroProps) {
 
           {/* Buttons */}
           <motion.div
-            className="flex gap-4 pt-4 flex-wrap"
+            className="flex gap-4 pt-2 flex-wrap"
             variants={fadeUp(0.2)}
             initial="hidden"
             animate={introComplete ? 'visible' : 'hidden'}
@@ -94,7 +94,7 @@ export default function Hero({ introComplete = false }: HeroProps) {
 
           {/* Open to work */}
           <motion.div
-            className="flex items-center gap-3 pt-8"
+            className="flex items-center gap-3 pt-4"
             variants={fadeUp(0.3)}
             initial="hidden"
             animate={introComplete ? 'visible' : 'hidden'}
@@ -111,15 +111,15 @@ export default function Hero({ introComplete = false }: HeroProps) {
           initial="hidden"
           animate={introComplete ? 'visible' : 'hidden'}
         >
-          <div className="absolute w-80 h-80 rounded-full bg-[#F70000]/15 blur-3xl" />
-          <div className="absolute w-64 h-64 rounded-full bg-[#F70000]/10 blur-2xl" />
-          <div className="relative w-[345px] h-[345px] md:w-[384px] md:h-[384px] rounded-full p-[3px] bg-gradient-to-br from-[#F70000] via-[#FF3333] to-[#F70000] shadow-2xl shadow-[#F70000]/20">
+          <div className="absolute w-[420px] h-[420px] rounded-full bg-[#F70000]/15 blur-3xl" />
+          <div className="absolute w-80 h-80 rounded-full bg-[#F70000]/10 blur-2xl" />
+          <div className="relative w-[380px] h-[380px] md:w-[440px] md:h-[440px] lg:w-[480px] lg:h-[480px] rounded-full p-[3px] bg-gradient-to-br from-[#F70000] via-[#FF3333] to-[#F70000] shadow-2xl shadow-[#F70000]/20">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#0A0A0A]">
               <Image
                 src="/images/Abhinaya.jpeg"
                 alt="Abhinaya"
-                width={384}
-                height={384}
+                width={480}
+                height={480}
                 className="w-full h-full object-cover object-top"
                 priority
               />

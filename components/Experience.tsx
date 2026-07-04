@@ -15,7 +15,7 @@ const itemVariants = {
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-[#111111] relative overflow-hidden">
+    <section id="experience" className="py-16 bg-[#111111] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -30,7 +30,7 @@ export default function Experience() {
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#F70000] via-[#F70000]/40 to-transparent" />
 
-            <div className="space-y-10">
+            <div className="space-y-6">
               {portfolioData.experience.map((exp) => (
                 <motion.div key={exp.id} variants={itemVariants} className="relative pl-24">
                   <div className="absolute left-5 top-6 w-6 h-6 bg-[#F70000] rounded-full border-4 border-[#111111] shadow-lg shadow-[#F70000]/30" />
@@ -39,7 +39,7 @@ export default function Experience() {
                     className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-6 hover:border-[#F70000]/60 hover:shadow-lg hover:shadow-[#F70000]/10 transition-all duration-300"
                     whileHover={{ x: 4 }}
                   >
-                    <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
+                    <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
                       <div>
                         <h3 className="text-xl font-bold text-[#E6E6E5]">{exp.company}</h3>
                         <p className="text-[#F70000] font-semibold text-sm mt-0.5">{exp.role}</p>

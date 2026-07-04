@@ -121,7 +121,7 @@ export default function Skills() {
   const active = TABS.find((t) => t.id === activeTab)!;
 
   return (
-    <section id="skills" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
+    <section id="skills" className="py-16 bg-[#0A0A0A] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
@@ -130,7 +130,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-10"
+          className="mb-8"
         >
           <h2 className="section-title">Skills & Expertise</h2>
           <p className="text-[#A7A7A7] max-w-xl">
@@ -140,7 +140,7 @@ export default function Skills() {
 
         {/* Tab bar */}
         <motion.div
-          className="flex flex-wrap gap-2 mb-10"
+          className="flex flex-wrap gap-2 mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -165,7 +165,7 @@ export default function Skills() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 mb-20"
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 mb-12"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -181,7 +181,7 @@ export default function Skills() {
       </div>
 
       {/* Marquee full-bleed */}
-      <div className="border-t border-[#2A2A2A] pt-10 space-y-3">
+      <div className="border-t border-[#2A2A2A] pt-8 space-y-3">
         <p className="text-center text-[#7D7C7C] text-xs tracking-widest uppercase font-semibold mb-6">
           All Skills
         </p>
