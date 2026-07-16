@@ -63,7 +63,7 @@ export default function Hero({ introComplete = false }: HeroProps) {
             animate={introComplete ? 'visible' : 'hidden'}
           >
             <a
-              href="/Abhinaya_Reddy.pdf"
+              href="/Abhinaya_Reddy.pdf?v=20260716"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
