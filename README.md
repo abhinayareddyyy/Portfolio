@@ -2,7 +2,7 @@
 
 A modern, production-ready portfolio website built with cutting-edge technologies.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
@@ -12,38 +12,38 @@ A modern, production-ready portfolio website built with cutting-edge technologie
 - **Icons**: Lucide React
 - **Performance**: Optimized with Next.js built-in features
 
-## ✨ Features
+## Features
 
 ### Design & UX
-- ✅ Premium dark theme with glassmorphism
-- ✅ Fully responsive design (mobile-first)
-- ✅ Smooth animations with Framer Motion
-- ✅ GSAP ScrollTrigger animations
-- ✅ Lenis smooth scrolling
-- ✅ Lucide icons integration
+- Premium dark theme with glassmorphism
+- Fully responsive design (mobile-first)
+- Smooth animations with Framer Motion
+- GSAP ScrollTrigger animations
+- Lenis smooth scrolling
+- Lucide icons integration
 
 ### Performance
-- ✅ Image optimization
-- ✅ Code splitting & lazy loading
-- ✅ Optimized bundle size
-- ✅ Fast page loads (<1s)
-- ✅ LCP, CLS, FID optimized
+- Image optimization
+- Code splitting & lazy loading
+- Optimized bundle size
+- Fast page loads (<1s)
+- LCP, CLS, FID optimized
 
 ### SEO
-- ✅ Semantic HTML
-- ✅ Meta tags & Open Graph
-- ✅ Mobile-friendly viewport
-- ✅ Structured data ready
-- ✅ XML sitemap support
+- Semantic HTML
+- Meta tags & Open Graph
+- Mobile-friendly viewport
+- Structured data ready
+- XML sitemap support
 
 ### Accessibility
-- ✅ WCAG 2.1 compliant
-- ✅ Keyboard navigation
-- ✅ Focus management
-- ✅ Screen reader support
-- ✅ Reduced motion support
+- WCAG 2.1 compliant
+- Keyboard navigation
+- Focus management
+- Screen reader support
+- Reduced motion support
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nextjs-portfolio/
@@ -81,11 +81,11 @@ nextjs-portfolio/
 └── README.md                   # Documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -107,7 +107,7 @@ npm run dev
 4. **Open in browser**
 Navigate to `http://localhost:3000`
 
-## 🛠️ Development
+## Development
 
 ### Development Server
 ```bash
@@ -130,7 +130,7 @@ npm run type-check
 npm run lint
 ```
 
-## 📝 Customization
+## Customization
 
 ### Update Personal Information
 
@@ -207,7 +207,7 @@ projects: [
 ]
 ```
 
-## 🎨 Styling
+## Styling
 
 The project uses:
 - **Tailwind CSS**: Utility-first CSS framework
@@ -225,7 +225,7 @@ Available custom Tailwind classes:
 - `.glass` - Glassmorphism effect
 - `.gradient-text` - Gradient text effect
 
-## 🎬 Animations
+## Animations
 
 ### Framer Motion
 Used for component-level animations with:
@@ -245,7 +245,7 @@ Configured in `SmoothScroll.tsx` with:
 - Custom easing function
 - Smooth momentum scrolling
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 ```bash
@@ -282,7 +282,7 @@ Create `.env.local`:
 # NEXT_PUBLIC_* are exposed to browser
 ```
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 Target metrics:
 - **LCP**: < 2.5s
@@ -290,30 +290,30 @@ Target metrics:
 - **CLS**: < 0.1
 - **Bundle Size**: < 100KB
 
-## 🔒 Security
+## Security
 
-- ✅ Next.js security headers
-- ✅ Content Security Policy
-- ✅ No external fonts (system fonts)
-- ✅ Secure image optimization
-- ✅ CSRF protection ready
+- Next.js security headers
+- Content Security Policy
+- No external fonts (system fonts)
+- Secure image optimization
+- CSRF protection ready
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome/Edge 90+
 - Firefox 88+
 - Safari 14+
 - Mobile browsers (iOS Safari 14+, Chrome Mobile)
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to fork and customize this portfolio for your needs!
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## 🙋 Support
+## Support
 
 For issues or questions:
 1. Check existing documentation
@@ -321,7 +321,7 @@ For issues or questions:
 3. Check Next.js docs: https://nextjs.org/docs
 4. Check Tailwind docs: https://tailwindcss.com/docs
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - [ ] Blog section with MDX
 - [ ] Dark/Light mode toggle
@@ -334,6 +334,7 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ using Next.js 15 & TypeScript**
+**Built with using Next.js 15 & TypeScript**
+**Abhinaya Reddy**
 
 Happy coding! 🚀
