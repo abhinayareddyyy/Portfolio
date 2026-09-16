@@ -251,14 +251,14 @@ export const portfolioData = {
   },
 
   navigation: [
-    { label: 'Home', href: 'home' },
-    { label: 'About', href: 'about' },
-    { label: 'Experience', href: 'experience' },
-    { label: 'Projects', href: 'projects' },
-    { label: 'Achievements', href: 'achievements' },
-    { label: 'Volunteering', href: 'volunteering' },
-    { label: 'Skills', href: 'skills' },
-    { label: 'Education', href: 'education' },
-    { label: 'Contact', href: 'contact' },
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Achievements', href: '#achievements' },
+    { label: 'Volunteering', href: '#volunteering' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Education', href: '#education' },
+    { label: 'Contact', href: '#contact' },
   ],
 };
