@@ -19,7 +19,6 @@ const DEVICON: Record<string, string> = {
   'VS Code': 'devicon-vscode-plain colored',
   Canva: 'devicon-canva-plain colored',
   Figma: 'devicon-figma-plain colored',
-  'MERN Stack': 'devicon-mongodb-plain colored',
 };
 
 /* ─── Category definitions ─── */
@@ -27,12 +26,12 @@ const TABS = [
   {
     id: 'frontend',
     label: 'Frontend',
-    skills: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
   {
     id: 'programming',
     label: 'Programming',
-    skills: ['C', 'Java', 'Python', 'MySQL'],
+    skills: ['C', 'Java', 'Python', 'MySQL', 'NumPy', 'Pandas'],
   },
   {
     id: 'concepts',
