@@ -69,7 +69,7 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: 'LATTICE',
+      title: 'Honeycomb',
       description: 'An offline-first AI workbench for air-gapped industrial environments, enabling secure document interaction, grounded retrieval, visual analysis, and verified business document generation without external AI services.',
       technologies: ['Python', 'FastAPI', 'Ollama', 'Qwen', 'FastEmbed', 'BM25', 'OCR', 'RAG', 'Agentic AI'],
       emoji: '⬡',
