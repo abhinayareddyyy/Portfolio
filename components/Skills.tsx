@@ -36,7 +36,7 @@ const TABS = [
   {
     id: 'concepts',
     label: 'Core Concepts',
-    skills: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
+    skills: ['DBMS', 'Operating Systems', 'Web Technologies', 'OOP', 'Software Engineering', 'Artificial Intelligence'],
   },
   {
     id: 'tools',
