@@ -133,8 +133,8 @@ export const portfolioData = {
   experience: [
     {
       id: 1,
-      company: 'Social Media Manager – Communitie Hyderabad',
-      role: '@communitie.racing',
+      company: 'Communitie Racing',
+      role: 'Social Media Manager',
       date: 'Feb 2026 – Present',
       type: 'Remote',
       description: 'Developing and executing social media campaigns to increase community visibility and engagement.',
@@ -147,7 +147,7 @@ export const portfolioData = {
     },
     {
       id: 2,
-      company: 'National Entrepreneurship Development Cell at GCET (NEN)',
+      company: 'National Entrepreneurship Development Cell',
       role: 'Team Member',
       date: 'Aug 2025 – Present',
       type: 'Onsite',
@@ -216,6 +216,13 @@ export const portfolioData = {
       description: 'Volunteered at Bhaswara 2026, contributing to event coordination and management.',
       icon: '🌟',
     },
+    {
+      id: 6,
+      title: 'SIH Internal Round 2026',
+      category: 'Hackathon',
+      description: 'Participated in the SIH Internal Round 2026, and got shortlisted for the final round.',
+      icon: '💡',
+    }
   ],
 
   contact: {
@@ -227,17 +234,18 @@ export const portfolioData = {
       { label: 'GitHub', value: 'github.com/abhinayareddyyy', href: 'https://github.com/abhinayareddyyy', icon: 'github' },
       { label: 'Google Form', value: 'Open the contact form', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfkHR8KyWfFLKahd37_XLOwdiTBsZOdIaMm4RQGWqXZgX5xCw/viewform?usp=dialog', icon: 'form' },
     ],
+    
   },
 
   navigation: [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Achievements', href: '#achievements' },
-    { label: 'Volunteering', href: '#volunteering' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: 'home' },
+    { label: 'About', href: 'about' },
+    { label: 'Experience', href: 'experience' },
+    { label: 'Projects', href: 'projects' },
+    { label: 'Achievements', href: 'achievements' },
+    { label: 'Volunteering', href: 'volunteering' },
+    { label: 'Skills', href: 'skills' },
+    { label: 'Education', href: 'education' },
+    { label: 'Contact', href: 'contact' },
   ],
 };
