@@ -136,7 +136,7 @@ export const portfolioData = {
       emoji: '✦',
       image: '/images/favicon.png',
       github: 'https://github.com/abhinayareddyyy/Portfolio.git',
-      live: 'https://abhinayareddy.me',
+      live: 'https://abhinayaaareddy.framer.website',
       highlights: [
         'UI/UX and visual design',
         'Responsive layouts and website interactions',
