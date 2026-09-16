@@ -232,7 +232,6 @@ export const portfolioData = {
       { label: 'Email', value: 'abhinaya.4507@gmail.com', href: 'mailto:abhinaya.4507@gmail.com', icon: '✉️' },
       { label: 'LinkedIn', value: 'linkedin.com/in/abhinaya-gayatri-reddy', href: 'https://linkedin.com/in/abhinaya-gayatri-reddy', icon: 'in' },
       { label: 'GitHub', value: 'github.com/abhinayareddyyy', href: 'https://github.com/abhinayareddyyy', icon: 'github' },
-      { label: 'Google Form', value: 'Open the contact form', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfkHR8KyWfFLKahd37_XLOwdiTBsZOdIaMm4RQGWqXZgX5xCw/viewform?usp=dialog', icon: 'form' },
     ],
     
   },
