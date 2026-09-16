@@ -128,6 +128,22 @@ export const portfolioData = {
         'Enjoyable user experience',
       ],
     },
+    {
+      id: 5,
+      title: 'Personal Portfolio Website',
+      description: 'Designed and developed a responsive personal portfolio website in Framer, translating UI/UX designs into an interactive web experience centered on project discovery and storytelling.',
+      technologies: ['Framer', 'Figma', 'UI/UX', 'Responsive Web Design'],
+      emoji: '✦',
+      image: '/images/favicon.png',
+      github: 'https://github.com/abhinayareddyyy/Portfolio.git',
+      live: 'https://abhinayareddy.me',
+      highlights: [
+        'UI/UX and visual design',
+        'Responsive layouts and website interactions',
+        'Personal branding and content presentation',
+        'Project discovery and storytelling structure',
+      ],
+    },
   ],
 
   experience: [

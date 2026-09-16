@@ -128,7 +128,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-6 py-3 bg-[#F70000] hover:bg-[#FF2222] text-white rounded-lg text-base font-medium transition-all duration-300"
                         >
-                          <ExternalLink size={15} /> Live Demo
+                          <ExternalLink size={15} /> View Live
                         </a>
                       )}
                     </div>
