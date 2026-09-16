@@ -12,7 +12,6 @@ export const portfolioData = {
   social: {
     linkedin: 'https://linkedin.com/in/abhinaya-gayatri-reddy',
     github: 'https://github.com/abhinayareddyyy',
-    twitter: 'https://twitter.com',
     email: 'mailto:abhinaya.4507@gmail.com',
   },
 
@@ -62,7 +61,7 @@ export const portfolioData = {
   skills: {
     web: ['HTML', 'CSS', 'JavaScript', 'React'],
     programming: ['Python', 'Java', 'C', 'MySQL', 'NumPy', 'Pandas'],
-    concepts: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
+    concepts: ['DBMS', 'Operating Systems', 'Web Technologies', 'OOP', 'Software Engineering', 'Artificial Intelligence'],
     tools: ['Git', 'GitHub', 'VS Code', 'Canva', 'Figma'],
   },
 
@@ -130,12 +129,11 @@ export const portfolioData = {
     },
     {
       id: 5,
-      title: 'Personal Portfolio Website',
+      title: 'Creative Portfolio',
       description: 'Designed and developed a responsive personal portfolio website in Framer, translating UI/UX designs into an interactive web experience centered on project discovery and storytelling.',
-      technologies: ['Framer', 'Figma', 'UI/UX', 'Responsive Web Design'],
+      technologies: ['Framer', 'UI/UX', 'Responsive Web Design'],
       emoji: '✦',
       image: '/images/favicon.png',
-      github: 'https://github.com/abhinayareddyyy/Portfolio.git',
       live: 'https://abhinayaaareddy.framer.website',
       highlights: [
         'UI/UX and visual design',
