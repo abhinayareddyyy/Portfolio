@@ -7,10 +7,10 @@ import { Mail, Linkedin, Github, FileText, CheckCircle, AlertCircle } from 'luci
 
 // Google Forms configuration
 const GOOGLE_FORM_ACTION =
-  'https://docs.google.com/forms/d/e/1FAIpQLSf1jB6mzXUEmGv7EFjs_ygD9soIA3RUx-9bGdnrYF52eK510Q/formResponse';
-const ENTRY_NAME    = 'entry.283007280';
-const ENTRY_EMAIL   = 'entry.1185754734';
-const ENTRY_MESSAGE = 'entry.1067915766';
+  'https://docs.google.com/forms/d/e/1FAIpQLSfkHR8KyWfFLKahd37_XLOwdiTBsZOdIaMm4RQGWqXZgX5xCw/formResponse';
+const ENTRY_NAME    = 'entry.2005620554';
+const ENTRY_EMAIL   = 'entry.1045781291';
+const ENTRY_MESSAGE = 'entry.1065046570';
 
 const containerVariants = {
   hidden: { opacity: 0 },
