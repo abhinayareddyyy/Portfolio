@@ -17,7 +17,6 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import AnimationProvider from '@/components/AnimationProvider';
-import CustomCursor from '@/components/CustomCursor';
 import DietCokeScrollbar from '@/components/DietCokeScrollbar';
 import IntroOverlay from '@/components/IntroOverlay';
 
@@ -38,7 +37,6 @@ export default function Home() {
       </AnimatePresence>
 
       <SmoothScroll>
-        <CustomCursor />
         <DietCokeScrollbar />
         <Navbar />
         <Hero introComplete={introComplete} />

@@ -33,7 +33,6 @@
   body {
     @apply bg-dark-primary text-text-light font-inter;
     overflow-x: hidden;
-    cursor: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -42,11 +41,6 @@
 
   a, button {
     @apply transition-colors duration-300;
-    cursor: none;
-  }
-
-  * {
-    cursor: none !important;
   }
 }
 
@@ -86,44 +80,6 @@
     @apply rounded-lg p-7 transition-all duration-300 hover:border-accent-pink;
   }
 
-  /* Custom Cursor */
-  .cursor-outer {
-    position: fixed;
-    width: 36px;
-    height: 36px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-  }
-
-  .cursor-inner {
-    position: fixed;
-    width: 6px;
-    height: 6px;
-    background: #ffffff;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 100000;
-    transform: translate(-50%, -50%);
-    transition: width 0.15s ease, height 0.15s ease;
-  }
-
-  .cursor-outer.hovered {
-    width: 64px;
-    height: 64px;
-    border-color: #F70000;
-    background: rgba(247, 0, 0, 0.08);
-  }
-
-  .cursor-inner.hovered {
-    width: 8px;
-    height: 8px;
-    background: #F70000;
-  }
 }
 
 /* Selection */
