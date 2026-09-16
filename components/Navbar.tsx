@@ -1,12 +1,21 @@
 'use client';
 
 import { useState } from 'react';
+import type { MouseEvent } from 'react';
 import { Menu, X } from 'lucide-react';
 import { portfolioData } from '@/lib/data';
 import AnimatedName from '@/components/AnimatedName';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavigation = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) return;
+
+    event.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/85 backdrop-blur-md border-b border-[#2A2A2A]">
@@ -34,6 +43,7 @@ export default function Navbar() {
       <li key={item.href}>
         <a
           href={item.href}
+          onClick={(event) => handleNavigation(event, item.href)}
           className="text-[#A7A7A7] hover:text-[#F70000] transition-colors text-sm font-medium tracking-wide whitespace-nowrap"
         >
           {item.label}
@@ -66,6 +76,7 @@ export default function Navbar() {
           <a
             key={item.href}
             href={item.href}
+            onClick={(event) => handleNavigation(event, item.href)}
             className="block px-5 py-3 text-sm text-[#A7A7A7] hover:text-[#F70000] hover:bg-white/5 transition-colors"
           >
             {item.label}
@@ -98,8 +109,8 @@ export default function Navbar() {
                 <li key={item.href}>
                   <a
                     href={item.href}
+                    onClick={(event) => handleNavigation(event, item.href)}
                     className="text-[#A7A7A7] hover:text-[#F70000] transition-colors font-medium block py-2"
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </a>

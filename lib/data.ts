@@ -61,7 +61,7 @@ export const portfolioData = {
 
   skills: {
     web: ['HTML', 'CSS', 'JavaScript', 'React'],
-    programming: ['Java', 'C', 'MySQL', 'NumPy', 'Pandas'],
+    programming: ['Python', 'Java', 'C', 'MySQL', 'NumPy', 'Pandas'],
     concepts: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
     tools: ['Git', 'GitHub', 'VS Code', 'Canva', 'Figma'],
   },
@@ -69,9 +69,25 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: 'LATTICE',
+      description: 'An offline-first AI workbench for air-gapped industrial environments, enabling secure document interaction, grounded retrieval, visual analysis, and verified business document generation without external AI services.',
+      technologies: ['Python', 'FastAPI', 'Ollama', 'Qwen', 'FastEmbed', 'BM25', 'OCR', 'RAG', 'Agentic AI'],
+      emoji: '⬡',
+      image: '/images/Honeycomb.png',
+      github: 'https://github.com/abhinayareddyyy/Lattice.git',
+      live: '',
+      highlights: [
+        'Designed product workflows for air-gapped AI environments',
+        'Built hybrid RAG with semantic search, BM25, and neural reranking',
+        'Integrated Qdrant, agent-based verification, and multimodal OCR',
+        'Supported PDF, DOCX, XLSX, and PPTX document generation',
+      ],
+    },
+    {
+      id: 2,
       title: 'NeuroLift',
       description: 'IoT-enabled wearable prototype designed to monitor gait patterns in real-time for rehabilitation assistance during a 36-hour hackathon.',
-      technologies: ['Arduino', 'Sensors', 'C#', 'IoT'],
+      technologies: ['Arduino', 'Sensors', 'C++', 'IoT'],
       emoji: '⚙️',
       image: '/images/NeuroLift.jpg',
       github: 'https://github.com/abhinayareddyyy/NEUROLIFT',
@@ -83,7 +99,7 @@ export const portfolioData = {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: 'HungerHeal',
       description: 'Responsive web platform connecting food donors, volunteers, and NGOs to facilitate surplus food distribution and reduce food waste.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
@@ -98,7 +114,7 @@ export const portfolioData = {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: 'MintyMind',
       description: 'MintyMind is a web application designed to help users manage their daily tasks efficiently while maintaining an enjoyable user experience. The application leverages Design and Analysis of Algorithms (DAA) concepts to create smart task scheduling and optimization features.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'DAA'],
