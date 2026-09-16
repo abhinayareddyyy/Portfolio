@@ -10,7 +10,7 @@ export const portfolioData = {
   },
 
   social: {
-    linkedin: 'https://linkedin.com/in/abhinaya-reddy-286326343/',
+    linkedin: 'https://linkedin.com/in/abhinaya-gayatri-reddy',
     github: 'https://github.com/abhinayareddyyy',
     twitter: 'https://twitter.com',
     email: 'mailto:abhinaya.4507@gmail.com',
@@ -60,8 +60,8 @@ export const portfolioData = {
   ],
 
   skills: {
-    web: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
-    programming: ['Java', 'C', 'MySQL'],
+    web: ['HTML', 'CSS', 'JavaScript', 'React'],
+    programming: ['Java', 'C', 'MySQL', 'NumPy', 'Pandas'],
     concepts: ['DSA', 'DBMS', 'Operating Systems', 'Web Technologies', 'Object Oriented Programming', 'Software Engineering', 'Artificial Intelligence'],
     tools: ['Git', 'GitHub', 'VS Code', 'Canva', 'Figma'],
   },
@@ -207,8 +207,9 @@ export const portfolioData = {
     description: 'Feel free to reach out. Whether you have a question or just want to connect, feel free to get in touch.',
     links: [
       { label: 'Email', value: 'abhinaya.4507@gmail.com', href: 'mailto:abhinaya.4507@gmail.com', icon: '✉️' },
-      { label: 'LinkedIn', value: 'linkedin.com/in/p-abhinaya-reddy', href: 'https://linkedin.com/in/p-abhinaya-reddy', icon: 'in' },
+      { label: 'LinkedIn', value: 'linkedin.com/in/abhinaya-gayatri-reddy', href: 'https://linkedin.com/in/abhinaya-gayatri-reddy', icon: 'in' },
       { label: 'GitHub', value: 'github.com/abhinayareddyyy', href: 'https://github.com/abhinayareddyyy', icon: 'github' },
+      { label: 'Google Form', value: 'Open the contact form', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfkHR8KyWfFLKahd37_XLOwdiTBsZOdIaMm4RQGWqXZgX5xCw/viewform?usp=dialog', icon: 'form' },
     ],
   },
 

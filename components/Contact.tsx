@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '@/lib/data';
-import { Mail, Linkedin, Github, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
 // Google Forms configuration
 const GOOGLE_FORM_ACTION =
@@ -67,6 +67,7 @@ export default function Contact() {
     '✉️': <Mail size={24} className="text-accent-pink" />,
     'in': <Linkedin size={24} className="text-accent-pink" />,
     'github': <Github size={24} className="text-accent-pink" />,
+    'form': <FileText size={24} className="text-accent-pink" />,
   };
 
   return (
